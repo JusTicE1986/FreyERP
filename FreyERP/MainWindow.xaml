@@ -1,0 +1,107 @@
+﻿<Window x:Class="FreyERP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:FreyERP"
+        xmlns:vm="clr-namespace:FreyERP.ViewModels"
+        mc:Ignorable="d"
+        Title="FreyERP" Height="720" Width="1280"
+        WindowState="Maximized">
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <!--Toolbar-->
+        <DockPanel Background="{DynamicResource MaterialDesignPaper}">
+            <StackPanel Orientation="Horizontal"
+                        DockPanel.Dock="Top"
+                        Background="{DynamicResource PrimaryHueMidBrush}"
+                        Height="48"/>
+            <Button Command="{Binding ShowDashboardCommand}"
+                    ToolTip="Dashboard" 
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="ViewDashboardOutline" 
+                                         Width="24" 
+                                         Height="24"
+                                         Foreground="White"/>
+            </Button>
+            <Button Command="{Binding ShowCustomerCommand}"
+                    ToolTip="Kunden"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="AccountMultipleOutline"
+                                         Width="24"
+                                         Height="24"
+                                         Foreground="White"/>
+            </Button>
+            <Button Command="{Binding ShowOrdersCommand}"
+                    ToolTip="Bestellungen"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="ClipboardTextClockOutline"
+                                         Width="24"
+                                         Height="24"
+                                         Foreground="White"/>
+            </Button>
+            <Button Command="{Binding ShowStockCommand}"
+                    ToolTip="Bestände"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="Warehouse"
+                                         Width="24"
+                                         Height="24"
+                                         Foreground="White"/>
+            </Button>
+            <Button Command="{Binding ShowInvoicesCommand}"
+                    ToolTip="Rechnungen"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="FileDocumentOutline"
+                                         Width="24"
+                                         Height="24"
+                                         Foreground="White"/>
+            </Button>
+            <Button Command="{Binding ShowFinanceCommand}"
+                    ToolTip="Buchhaltung"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="CurrencyEur"
+                                         Width="24"
+                                         Height="24"
+                                         Foreground="White"/>
+            </Button>
+            <Button Command="{Binding ShowEmployeesCommand}"
+                    ToolTip="Personal"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="AccountTieOutline"
+                                         Width="24"
+                                         Height="24"
+                                         Foreground="White"/>
+            </Button>
+            <Button Command="{Binding ShowDocumentsCommand}"
+                    ToolTip="Dokumente"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="FileCabinet"
+                                         Width="24"
+                                         Height="24"
+                                         Foreground="White"/>
+            </Button>
+            <Button Command="{Binding ShowBackupCommand}"
+                    ToolTip="Backup"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="BackupRestore"
+                                         Width="24"
+                                         Height="24"
+                                         Foreground="White"/>
+            </Button>
+            <Button Command="{Binding ShowSettingsCommand}"
+                    ToolTip="Einstellungen"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="CogOutline"
+                                         Width="24"
+                                         Height="24"
+                                         Foreground="White"/>
+            </Button>
+            <!--Content Area-->
+            <ContentControl Content="{Binding CurrentView}"
+                            Margin="12"/>
+        </DockPanel>
+    </Grid>
+</Window>
