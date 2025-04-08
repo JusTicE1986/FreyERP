@@ -1,0 +1,13 @@
+[
+  {
+    "Id": 1,
+    "Vorname": "Thor",
+    "Nachname": "Odinson",
+    "Email": "thor@asgard.gov",
+    "Straﬂe": "Donnerweg",
+    "Hausnummer": 9,
+    "PLZ": 99999,
+    "Ort": "Asgard",
+    "Phone": "0190-THOR-MJOLNIR"
+  }
+]

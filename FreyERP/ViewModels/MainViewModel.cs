@@ -20,6 +20,7 @@ namespace FreyERP.ViewModels
 
         [RelayCommand]
         private void ShowDashboard() => CurrentView = new Views.DashboardView();
+        [RelayCommand]
         private void ShowCustomers() => CurrentView = new Views.CustomerView();
         private void ShowOrders() => CurrentView = new Views.OrdersView();
         private void ShowStock() => CurrentView = new Views.StockView();

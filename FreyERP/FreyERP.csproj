@@ -23,7 +23,14 @@
     <Folder Include="Controls\" />
     <Folder Include="Helpers\" />
     <Folder Include="Assets\" />
+    <Folder Include="Dummydaten\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Dummydaten\customer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

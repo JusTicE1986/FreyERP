@@ -22,7 +22,7 @@ namespace FreyERP.Models
         [Required, EmailAddress]
         public string Email { get; set; }
 
-        public string Staße { get; set; }
+        public string Straße { get; set; }
         public int Hausnummer { get; set; }
         public int PLZ { get; set; }
         public string Ort { get; set; } = string.Empty;

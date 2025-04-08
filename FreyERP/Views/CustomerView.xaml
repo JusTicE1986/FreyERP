@@ -4,9 +4,85 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FreyERP.Views"
+             xmlns:vm="clr-namespace:FreyERP.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             d:DataContext="{d:DesignInstance vm:CustomerViewModel}">
+    <UserControl.DataContext>
+        <vm:CustomerViewModel/>
+    </UserControl.DataContext>
+
+    <Grid Margin="12">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,8">
+            <Button Content="Laden" Command="{Binding LoadFromFileCommand}" Margin="0,0,8,0"/>
+            <Button Content="Speichern" Command="{Binding SaveToFileCommand}" />
+        </StackPanel>
+
+        <!--Kundenliste-->
+        <StackPanel Grid.Row="1">
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Kundenliste" FontWeight="Bold" FontSize="14" Margin="0 0 0 8"/>
+                <DataGrid ItemsSource="{Binding Customers}" SelectedItem="{Binding SelectedCustomer, Mode=TwoWay}"
+                      AutoGenerateColumns="False" IsReadOnly="True" Height="Auto">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Name" Binding="{Binding FullName}"/>
+                        <DataGridTextColumn Header="Ort" Binding="{Binding Ort}"/>
+                        <DataGridTextColumn Header="Telefon" Binding="{Binding Phone}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 0">
+                    <Button Content="Neu" Command="{Binding NewCusomterCommand}" Margin="0 0 8 0"/>
+                    <Button Content="Löschen" Command="{Binding DeleteCustomerCommand}" />
+                </StackPanel>
+            </StackPanel>
+
+            <!--Detailansicht-->
+            <StackPanel Grid.Column="1" Margin="24 0 0 0">
+                <TextBlock Text="Kundendetails" FontWeight="Bold" FontSize="14" Margin="0 0 0 8"/>
+                <StackPanel Orientation="Vertical" Margin="0 0 0 4">
+                    <TextBlock Text="Vorname" />
+                    <TextBox Text="{Binding SelectedCustomer.Vorname, Mode=TwoWay}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0 0 0 4">
+                    <TextBlock Text="Nachname" />
+                    <TextBox Text="{Binding SelectedCustomer.Nachname, Mode=TwoWay}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0 0 0 4">
+                    <TextBlock Text="Email" />
+                    <TextBox Text="{Binding SelectedCustomer.Email, Mode=TwoWay}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0 0 0 4">
+                    <TextBlock Text="Straße" />
+                    <TextBox Text="{Binding SelectedCustomer.Straße, Mode=TwoWay}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 4">
+                    <StackPanel Width="100">
+                        <TextBlock Text="Hausnummer" />
+                        <TextBox Text="{Binding SelectedCustomer.Hausnummer, Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Width="100">
+                        <TextBlock Text="PLZ" />
+                        <TextBox Text="{Binding SelectedCustomer.PLZ, Mode=TwoWay}"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Ort" />
+                    <TextBox Text="{Binding SelectedCustomer.Ort, Mode=TwoWay}"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Telefon" />
+                    <TextBox Text="{Binding SelectedCustomer.Phone, Mode=TwoWay}"/>
+                </StackPanel>
+                <Button Content="Speichern" Command="{Binding SaveCustomerCommand}"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>
