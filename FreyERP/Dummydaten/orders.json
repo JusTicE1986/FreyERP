@@ -1,0 +1,41 @@
+[
+  {
+    "Id": 1,
+    "CustomerId": 1,
+    "Kundenname": "Thor Odinson",
+    "Bestelldatum": "2025-04-08T00:00:00+02:00",
+    "Positionen": [
+      {
+        "ProductId": 1,
+        "Bezeichnung": "Mj\u00F6lnir - Hammer des Donners",
+        "Einzelpreis": 999.99,
+        "Menge": 1,
+        "Gesamtpreis": 999.99
+      },
+      {
+        "ProductId": 2,
+        "Bezeichnung": "Gungnir - Speer des Odin",
+        "Einzelpreis": 1199.00,
+        "Menge": 1,
+        "Gesamtpreis": 1199.00
+      }
+    ],
+    "Gesamtsumme": 2198.99
+  },
+  {
+    "Id": 2,
+    "CustomerId": 3,
+    "Kundenname": "Freyja Vanadis",
+    "Bestelldatum": "2025-04-08T21:12:23.4308562+02:00",
+    "Positionen": [
+      {
+        "ProductId": 2,
+        "Bezeichnung": "Gungnir \u2013 Speer des Odin",
+        "Einzelpreis": 1199.00,
+        "Menge": 3,
+        "Gesamtpreis": 3597.00
+      }
+    ],
+    "Gesamtsumme": 3597.00
+  }
+]

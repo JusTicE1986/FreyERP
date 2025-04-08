@@ -18,25 +18,33 @@
             <StackPanel Orientation="Horizontal"
                         DockPanel.Dock="Top"
                         Background="{DynamicResource PrimaryHueMidBrush}"
-                        Height="48">
+                        Height="76">
+
                 <Button Command="{Binding ShowDashboardCommand}"
                     ToolTip="Dashboard" 
-                    Style="{StaticResource MaterialDesignFlatButton}">
+                    Style="{StaticResource ToolbarButtonStyle}">
                     <StackPanel Orientation="Vertical" Margin="4" Width="64">
                         <materialDesign:PackIcon Kind="ViewDashboardOutline" Width="24" Height="24" Foreground="White" HorizontalAlignment="Center"/>
                         <TextBlock Text="Dashboard" Foreground="White" FontSize="10" HorizontalAlignment="Center" />
                     </StackPanel>
-                    
                 </Button>
-                <Button Command="{Binding ShowCustomersCommand}" Style="{StaticResource MaterialDesignFlatButton}">
+
+                <Button Command="{Binding ShowCustomersCommand}" Style="{StaticResource ToolbarButtonStyle}">
                     <StackPanel Orientation="Vertical" Margin="4" Width="64">
                         <materialDesign:PackIcon Kind="AccountMultipleOutline" Width="24" Height="24" Foreground="White" HorizontalAlignment="Center"/>
                         <TextBlock Text="Kunden" Foreground="White" FontSize="10" HorizontalAlignment="Center" />
                     </StackPanel>
                 </Button>
+                <Button Command="{Binding ShowProductsCommand}" ToolTip="Produkte" Style="{StaticResource MaterialDesignFlatButton}">
+                    <StackPanel Orientation="Vertical" Margin="4" Width="64">
+                        <materialDesign:PackIcon Kind="CubeOutline" Width="24" Height="24" Foreground="White" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Produkte" Foreground="White" FontSize="10" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
                 <Button Command="{Binding ShowOrdersCommand}"
                     ToolTip="Bestellungen"
-                    Style="{StaticResource MaterialDesignFlatButton}">
+                    Style="{StaticResource ToolbarButtonStyle}">
                     <StackPanel Orientation="Vertical" Margin="4" Width="64">
                         <materialDesign:PackIcon Kind="ClipboardTextOutline" Width="24" Height="24" Foreground="White" HorizontalAlignment="Center"/>
                         <TextBlock Text="Bestellungen" Foreground="White" FontSize="10" HorizontalAlignment="Center" />
@@ -44,7 +52,7 @@
                 </Button>
                 <Button Command="{Binding ShowStockCommand}"
                     ToolTip="Bestände"
-                    Style="{StaticResource MaterialDesignFlatButton}">
+                    Style="{StaticResource ToolbarButtonStyle}">
                     <StackPanel Orientation="Vertical" Margin="4" Width="64">
                         <materialDesign:PackIcon Kind="Warehouse" Width="24" Height="24" Foreground="White" HorizontalAlignment="Center"/>
                         <TextBlock Text="Bestände" Foreground="White" FontSize="10" HorizontalAlignment="Center" />
@@ -52,7 +60,7 @@
                 </Button>
                 <Button Command="{Binding ShowInvoicesCommand}"
                     ToolTip="Rechnungen"
-                    Style="{StaticResource MaterialDesignFlatButton}">
+                    Style="{StaticResource ToolbarButtonStyle}">
                     <StackPanel Orientation="Vertical" Margin="4" Width="64">
                         <materialDesign:PackIcon Kind="FileDocumentOutline" Width="24" Height="24" Foreground="White" HorizontalAlignment="Center"/>
                         <TextBlock Text="Rechnugen" Foreground="White" FontSize="10" HorizontalAlignment="Center" />
@@ -60,7 +68,7 @@
                 </Button>
                 <Button Command="{Binding ShowFinanceCommand}"
                     ToolTip="Buchhaltung"
-                    Style="{StaticResource MaterialDesignFlatButton}">
+                    Style="{StaticResource ToolbarButtonStyle}">
                     <StackPanel Orientation="Vertical" Margin="4" Width="64">
                         <materialDesign:PackIcon Kind="CurrencyEur" Width="24" Height="24" Foreground="White" HorizontalAlignment="Center"/>
                         <TextBlock Text="Buchhaltung" Foreground="White" FontSize="10" HorizontalAlignment="Center" />
@@ -68,7 +76,7 @@
                 </Button>
                 <Button Command="{Binding ShowEmployeesCommand}"
                     ToolTip="Personal"
-                    Style="{StaticResource MaterialDesignFlatButton}">
+                    Style="{StaticResource ToolbarButtonStyle}">
                     <StackPanel Orientation="Vertical" Margin="4" Width="64">
                         <materialDesign:PackIcon Kind="AccountTieOutline" Width="24" Height="24" Foreground="White" HorizontalAlignment="Center"/>
                         <TextBlock Text="Personal" Foreground="White" FontSize="10" HorizontalAlignment="Center" />
@@ -76,7 +84,7 @@
                 </Button>
                 <Button Command="{Binding ShowDocumentsCommand}"
                     ToolTip="Dokumente"
-                    Style="{StaticResource MaterialDesignFlatButton}">
+                    Style="{StaticResource ToolbarButtonStyle}">
                     <StackPanel Orientation="Vertical" Margin="4" Width="64">
                         <materialDesign:PackIcon Kind="FileCabinet" Width="24" Height="24" Foreground="White" HorizontalAlignment="Center"/>
                         <TextBlock Text="Dokumente" Foreground="White" FontSize="10" HorizontalAlignment="Center" />
@@ -84,7 +92,7 @@
                 </Button>
                 <Button Command="{Binding ShowBackupCommand}"
                     ToolTip="Backup"
-                    Style="{StaticResource MaterialDesignFlatButton}">
+                    Style="{StaticResource ToolbarButtonStyle}">
                     <StackPanel Orientation="Vertical" Margin="4" Width="64">
                         <materialDesign:PackIcon Kind="BackupRestore" Width="24" Height="24" Foreground="White" HorizontalAlignment="Center"/>
                         <TextBlock Text="Backup" Foreground="White" FontSize="10" HorizontalAlignment="Center" />
@@ -92,7 +100,7 @@
                 </Button>
                 <Button Command="{Binding ShowSettingsCommand}"
                     ToolTip="Einstellungen"
-                    Style="{StaticResource MaterialDesignFlatButton}">
+                    Style="{StaticResource ToolbarButtonStyle}">
                     <StackPanel Orientation="Vertical" Margin="4" Width="64">
                         <materialDesign:PackIcon Kind="CogOutline" Width="24" Height="24" Foreground="White" HorizontalAlignment="Center"/>
                         <TextBlock Text="Eisntellungen" Foreground="White" FontSize="10" HorizontalAlignment="Center" />

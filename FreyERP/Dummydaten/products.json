@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "Artikelnummer": "ASG-0001",
+    "Bezeichnung": "Mjölnir – Hammer des Donners",
+    "Einheit": "Stk",
+    "Einkaufspreis": 499.99,
+    "Verkaufspreis": 999.99,
+    "MwstKategorie": 19,
+    "Lagerbestand": 1
+  },
+  {
+    "Id": 2,
+    "Artikelnummer": "ASG-0002",
+    "Bezeichnung": "Gungnir – Speer des Odin",
+    "Einheit": "Stk",
+    "Einkaufspreis": 699.00,
+    "Verkaufspreis": 1199.00,
+    "MwstKategorie": 19,
+    "Lagerbestand": 1
+  }
+]

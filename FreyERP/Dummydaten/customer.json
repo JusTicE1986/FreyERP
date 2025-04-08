@@ -4,10 +4,32 @@
     "Vorname": "Thor",
     "Nachname": "Odinson",
     "Email": "thor@asgard.gov",
-    "Stra�e": "Donnerweg",
+    "Straße": "Donnerweg",
     "Hausnummer": 9,
     "PLZ": 99999,
     "Ort": "Asgard",
     "Phone": "0190-THOR-MJOLNIR"
+  },
+  {
+    "Id": 2,
+    "Vorname": "Loki",
+    "Nachname": "Laufeyson",
+    "Email": "loki@asgard.gov",
+    "Straße": "Listweg",
+    "Hausnummer": 66,
+    "PLZ": 99998,
+    "Ort": "Asgard",
+    "Phone": "0100-SHAPE-SHIFT"
+  },
+  {
+    "Id": 3,
+    "Vorname": "Freyja",
+    "Nachname": "Vanadis",
+    "Email": "freyja@vanaheim.org",
+    "Straße": "Katzengasse",
+    "Hausnummer": 9,
+    "PLZ": 88888,
+    "Ort": "Vanaheim",
+    "Phone": "0800-LOVE-GOLD"
   }
 ]

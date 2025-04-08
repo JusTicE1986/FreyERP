@@ -21,14 +21,14 @@
   <ItemGroup>
     <Folder Include="Converters\" />
     <Folder Include="Controls\" />
-    <Folder Include="Helpers\" />
     <Folder Include="Assets\" />
-    <Folder Include="Dummydaten\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="Dummydaten\customer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Dummydaten\products.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FreyERP.Models;
+using FreyERP.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,27 @@ namespace FreyERP.Views
         public OrdersView()
         {
             InitializeComponent();
+        }
+    private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is ComboBox comboBox &&
+                comboBox.SelectedItem is Product selectedProduct &&
+                comboBox.DataContext is OrderItem item)
+            {
+                item.Bezeichnung = selectedProduct.Bezeichnung;
+                item.Einzelpreis = selectedProduct.Verkaufspreis;
+            }
+        }
+
+        private void CustomerComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(sender is ComboBox comboBox &&
+                comboBox.SelectedItem is Customer selectedCustomer &&
+                DataContext is OrderViewModel vm &&
+                vm.SelectedOrder is not null)
+            {
+                vm.SelectedOrder.Kundenname = selectedCustomer.FullName;
+            }
         }
     }
 }
